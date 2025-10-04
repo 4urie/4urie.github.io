@@ -6,8 +6,9 @@ import {
   dataabout,
   meta,
   worktimeline,
-  skills,
   services,
+  achievements,
+  certificates,
 } from "../../content_option";
 
 export const About = () => {
@@ -56,30 +57,6 @@ export const About = () => {
           </Col>
         </Row>
         <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">Skills</h3>
-          </Col>
-          <Col lg="7">
-            {skills.map((data, i) => {
-              return (
-                <div key={i}>
-                  <h3 className="progress-title">{data.name}</h3>
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      style={{
-                        width: `${data.value}%`,
-                      }}
-                    >
-                      <div className="progress-value">{data.value}%</div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </Col>
-        </Row>
-        <Row className="sec_sp">
           <Col lang="5">
             <h3 className="color_sec py-4">services</h3>
           </Col>
@@ -93,6 +70,63 @@ export const About = () => {
               );
             })}
           </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="12">
+            <h3 className="color_sec py-4 text-center">🏆 Achievements</h3>
+            <hr className="t_border my-4 mx-auto" style={{width: '100px'}} />
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          {achievements.map((data, i) => {
+            return (
+              <Col lg="6" md="6" sm="12" key={i} className="mb-4">
+                <div className="achievement-card h-100">
+                  <div className="achievement-card-body">
+                    <div className="achievement-icon-wrapper">
+                      <span className="achievement-icon">{data.icon}</span>
+                    </div>
+                    <h5 className="achievement-card-title">{data.title}</h5>
+                    <span className="achievement-year">{data.year}</span>
+                    <p className="achievement-card-desc">{data.description}</p>
+                  </div>
+                </div>
+              </Col>
+            );
+          })}
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="12">
+            <h3 className="color_sec py-4 text-center">📜 Certificates</h3>
+            <hr className="t_border my-4 mx-auto" style={{width: '100px'}} />
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          {certificates.map((data, i) => {
+            return (
+              <Col lg="4" md="6" sm="12" key={i} className="mb-4">
+                <div className="certificate-card h-100">
+                  <div className="certificate-card-body">
+                    <div className="certificate-header">
+                      <h5 className="certificate-card-title">{data.title}</h5>
+                      <span className="certificate-date">{data.date}</span>
+                    </div>
+                    <p className="certificate-issuer">{data.issuer}</p>
+                    <p className="certificate-card-desc">{data.description}</p>
+                    <div className="certificate-footer">
+                      {data.link !== "#" ? (
+                        <a href={data.link} target="_blank" rel="noopener noreferrer" className="certificate-btn">
+                          View Certificate
+                        </a>
+                      ) : (
+                        <span className="certificate-btn disabled">Certificate Pending</span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </HelmetProvider>

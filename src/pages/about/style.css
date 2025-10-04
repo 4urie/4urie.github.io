@@ -98,3 +98,183 @@
         transform: translateZ(0);
     }
 }
+
+/* Achievement Cards - Similar to Portfolio Cards */
+.achievement-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
+}
+
+.achievement-card-body {
+    padding: 30px 25px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.achievement-icon-wrapper {
+    margin-bottom: 20px;
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 15px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.achievement-card-title {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.achievement-year {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.achievement-card-desc {
+    color: var(--text-color-2);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Certificate Cards - Similar to Portfolio Cards */
+.certificate-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
+}
+
+.certificate-card-body {
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.certificate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.certificate-card-title {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    font-family: 'Raleway', sans-serif;
+    flex: 1;
+    margin-right: 15px;
+}
+
+.certificate-date {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.certificate-issuer {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.certificate-card-desc {
+    color: var(--text-color-2);
+    line-height: 1.6;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.certificate-footer {
+    margin-top: auto;
+}
+
+.certificate-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.certificate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+}
+
+.certificate-btn.disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color-2);
+    cursor: not-allowed;
+}
+
+.certificate-btn.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Section Headers */
+.sec_sp .color_sec {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
